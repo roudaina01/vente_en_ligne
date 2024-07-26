@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="first-item">
+                        <div class="logo">
+                            <img src="assets/images/logo2.png"  style="border-radius:50%;width:50%;height:0%" alt="hexashop ecommerce templatemo">
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Adresse &amp; Information</h4>
+
+                        <ul>
+                            <li><a href="#">Congo Kinshasa</a></li>
+                            <li><a href="#">carmelntumba11@gmail.com</a></li>
+                            <li><a href="https://wa.me/56371108" target="_blank">+216 56 371 108</a></li>
+                        </ul>
+                 
+                </div>
+                <div class="col-lg-3">
+                    <h4>Achats &amp; Catégories</h4>
+                    <ul>
+                        <li><a href="#">Achat Homme</a></li>
+                        <li><a href="#">Achat femme</a></li>
+                        <li><a href="#">Achat Enfant</a></li>
+                        <li><a href="#">Achat Sac</a></li>
+
+                    </ul>
+                </div>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+                <script>
+                   function envoyer(){
+                    //e.preventDefault();
+                   }
+                </script>
+                <div class="col-lg-3">
+                    <h4>Laissez vous messages</h4>
+                    <div class="position-relative mx-auto" style="max-width: 400px;" id="">
+                        <form method="post">
+                        <input class="form-control border-secondary w-100 py-3 ps-4 pe-5" name="email" id="email" type="email" placeholder="Email" required />
+                        <textarea rows="3" class="form-control border-secondary w-100 py-3 ps-4 pe-5" id="msg" name="msg" placeholder="entre votre messages">
+                        </textarea>
+                        <button type="button" name="envoyer" onclick="
+
+                        let email=document.querySelector('#email').value;
+                        let msg=document.querySelector('#msg').value;
+                        //console.log(email,msg);
+                        $.ajax({
+                            type:'post',
+                            url:'message.php',
+                            data:{
+                                'email':email,
+                                'msg':msg
+                            },
+                            success:function(Response){
+                                alert('email bien recu,on va vous répondre le plutot possible');
+                                location.reload();
+                            }
+                        })
+                        " class="btn btn-secondary py-2 top-0 end-0 mt-2 me-2">Envoyer</button>
+                        </form>
+                    </div>
+   
+                </div>
+                <div class="col-lg-12">
+                    <div class="under-footer">
+                        <p>Copyright © 2024 CarmaShop. All Rights Reserved. 
+                        
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+</body>
+</html>
